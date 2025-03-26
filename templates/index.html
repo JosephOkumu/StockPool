@@ -19,9 +19,9 @@
                 <div class="nav-links">
                     <a href="#features">Features</a>
                     <a href="#roles">Accounts</a>
-                    <a href="#login">Login</a>
+                    <a href="/login">Login</a>
                 </div>
-                <button class="btn btn-primary" onclick="showLogin()">Get Started</button>
+                <button class="btn btn-primary" onclick="window.location.href='/login'">Get Started</button>
             </nav>
         </div>
     </header>
@@ -31,7 +31,7 @@
         <div class="container">
             <h1>End-to-end Healthcare Management</h1>
             <p>Connect with doctors, nursing services, and laboratories all in one place. Our AI assistant helps you find the perfect healthcare professional for your needs.</p>
-            <button class="btn btn-secondary" onclick="showLogin()">Create Account</button>
+            <button class="btn btn-secondary" onclick="window.location.href='/login'">Create Account</button>
         </div>
     </section>
 
@@ -111,63 +111,8 @@
         </div>
     </section>
 
-    <!-- Login/Signup Section -->
-    <section class="login-section" id="login">
-        <div class="container">
-            <div class="login-container">
-                <div class="tabs">
-                    <div class="tab active" data-target="login">Login</div>
-                    <div class="tab" data-target="signup">Sign Up</div>
-                </div>
-                
-                <!-- Login Form -->
-                <div class="tab-content active" id="login">
-                    <form id="login-form">
-                        <div class="form-group">
-                            <label class="form-label" for="login-email">Email</label>
-                            <input type="email" id="login-email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="login-password">Password</label>
-                            <input type="password" id="login-password" class="form-control" required>
-                        </div>
-                        <button type="submit" class="form-submit">Login</button>
-                    </form>
-                </div>
-                
-                <!-- Signup Form -->
-                <div class="tab-content" id="signup">
-                    <form id="signup-form">
-                        <div class="form-group">
-                            <label class="form-label" for="signup-name">Full Name</label>
-                            <input type="text" id="signup-name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="signup-email">Email</label>
-                            <input type="email" id="signup-email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="signup-password">Password</label>
-                            <input type="password" id="signup-password" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="signup-role">Role</label>
-                            <select id="signup-role" class="form-select" required>
-                                <option value="" disabled selected>Select your role</option>
-                                <option value="patient">Patient</option>
-                                <option value="doctor">Doctor</option>
-                                <option value="nursing">Nursing Facility</option>
-                                <option value="laboratory">Laboratory</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="form-submit">Sign Up</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Remove the entire login-section and its related modals -->
+    <!-- Continue with the footer section ... -->
     <footer>
         <div class="container">
             <div class="footer-grid">

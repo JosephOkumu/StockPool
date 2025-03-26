@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{block "title" .}}Dashboard - Afya Mawinguni{{end}}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>AFYA <span>MAWINGUNI</span></h1>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="/dashboard" class="{{block "dashboard_active" .}}{{end}}"><i class="fas fa-home"></i> Dashboard</a></li>
+                {{block "sidebar_menu" .}}{{end}}
+                <li><a href="/profile"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="dashboard-header">
+                <h2>{{block "header_title" .}}Dashboard{{end}}</h2>
+                <div class="user-info">
+                    <span>Welcome, {{.User.Name}}</span>
+                </div>
+            </div>
+            
+            {{block "content" .}}{{end}}
+        </div>
+    </div>
+    
+    <!-- AI Assistant Button -->
+    <div class="ai-assistant" onclick="toggleAIAssistant()">
+        <i class="fas fa-robot"></i>
+    </div>
+    
+    <!-- AI Assistant Modal -->
+    <div class="modal-overlay" id="ai-assistant-modal">
+        <div class="modal">
+            <span class="modal-close" onclick="closeModal('ai-assistant-modal')">&times;</span>
+            <h2 class="modal-title">AI Health Assistant</h2>
+            <p>How can I help you today?</p>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ask a question...">
+            </div>
+            <button class="btn btn-primary">Ask AI Assistant</button>
+        </div>
+    </div>
+    
+    <script src="/static/js/main.js"></script>
+    {{block "scripts" .}}{{end}}
+</body>
+</html>

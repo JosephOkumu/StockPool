@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afya Mawinguni - End-to-end Healthcare Management</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="/static/images/afyalogo.png" alt="Afya Mawinguni Logo" class="nav-logo">
+                    <h1>AFYA <span>MAWINGUNI</span></h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#roles">Accounts</a>
+                    <a href="#login">Login</a>
+                </div>
+                <button class="btn btn-primary" onclick="showLogin()">Get Started</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>End-to-end Healthcare Management</h1>
+            <p>Connect with doctors, nursing services, and laboratories all in one place. Our AI assistant helps you find the perfect healthcare professional for your needs.</p>
+            <button class="btn btn-secondary" onclick="showLogin()">Create Account</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Features</h2>
+                <p>Comprehensive healthcare solutions for patients and providers</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>AI Health Assistant</h3>
+                    <p>Our intelligent AI assistant helps you find the right healthcare professional based on your symptoms and preferences. Get personalized recommendations and quick access to medical advice.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Appointment Scheduling</h3>
+                    <p>Book appointments with doctors, nursing facilities, and laboratories with just a few clicks. Manage your healthcare schedule in one convenient place.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Secure Medical Records</h3>
+                    <p>Store and access your medical records securely. Share them with healthcare providers as needed, ensuring continuity of care across different facilities.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Telemedicine Services</h3>
+                    <p>Connect with healthcare professionals remotely through video consultations. Get medical advice from the comfort of your home.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Medication Tracking</h3>
+                    <p>Keep track of your medications, dosages, and schedules. Receive reminders to ensure you never miss a dose.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Lab Results & Imaging</h3>
+                    <p>View your laboratory results and medical imaging reports online. Easily share them with your healthcare providers for better coordination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Roles Section -->
+    <section class="roles" id="roles">
+        <div class="container">
+            <div class="section-title">
+                <h2>Accounts</h2>
+                <p>Tailored experiences for different healthcare stakeholders</p>
+            </div>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <div class="role-icon customer-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Patients</h3>
+                    <p>Find healthcare providers, book appointments, access medical records, and receive personalized health recommendations.</p>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon doctor-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Doctors</h3>
+                    <p>Manage patient appointments, access medical histories, prescribe medications, and coordinate with other healthcare providers.</p>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon nursing-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Nursing Facilities</h3>
+                    <p>Coordinate patient care, manage staff schedules, track medical supplies, and communicate with doctors and laboratories.</p>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon lab-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Laboratories</h3>
+                    <p>Process test requests, manage samples, deliver results, and coordinate with doctors and nursing facilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login/Signup Section -->
+    <section class="login-section" id="login">
+        <div class="container">
+            <div class="login-container">
+                <div class="tabs">
+                    <div class="tab active" data-target="login">Login</div>
+                    <div class="tab" data-target="signup">Sign Up</div>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="tab-content active" id="login">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label class="form-label" for="login-email">Email</label>
+                            <input type="email" id="login-email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="login-password">Password</label>
+                            <input type="password" id="login-password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="form-submit">Login</button>
+                    </form>
+                </div>
+                
+                <!-- Signup Form -->
+                <div class="tab-content" id="signup">
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label class="form-label" for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="signup-email">Email</label>
+                            <input type="email" id="signup-email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="signup-password">Password</label>
+                            <input type="password" id="signup-password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="signup-role">Role</label>
+                            <select id="signup-role" class="form-select" required>
+                                <option value="" disabled selected>Select your role</option>
+                                <option value="patient">Patient</option>
+                                <option value="doctor">Doctor</option>
+                                <option value="nursing">Nursing Facility</option>
+                                <option value="laboratory">Laboratory</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="form-submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Afya Mawinguni</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#roles">Accounts</a></li>
+                        <li><a href="#login">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>For Patients</h3>
+                    <ul>
+                        <li><a href="#">Find a Doctor</a></li>
+                        <li><a href="#">Book Appointment</a></li>
+                        <li><a href="#">Medical Records</a></li>
+                        <li><a href="#">Telemedicine</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>For Providers</h3>
+                    <ul>
+                        <li><a href="#">Provider Registration</a></li>
+                        <li><a href="#">Practice Management</a></li>
+                        <li><a href="#">Patient Coordination</a></li>
+                        <li><a href="#">Billing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="mailto:info@afyamawinguni.com">info@afyamawinguni.com</a></li>
+                        <li><a href="tel:+254712345678">+254 712 345 678</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Afya Mawinguni. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Assistant Button -->
+    <div class="ai-assistant" onclick="toggleAIAssistant()">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <!-- AI Assistant Modal -->
+    <div class="modal-overlay" id="ai-assistant-modal">
+        <div class="modal">
+            <span class="modal-close" onclick="closeModal('ai-assistant-modal')">&times;</span>
+            <h2 class="modal-title">AI Health Assistant</h2>
+            <p>How can I help you today?</p>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Describe your symptoms or ask a question...">
+            </div>
+            <button class="btn btn-primary">Ask AI Assistant</button>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
